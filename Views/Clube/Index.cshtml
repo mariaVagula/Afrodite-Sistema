@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Afrodite_Sistema.Models.Clube>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeClube)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoClube)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoPlano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetalhesClube)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorClube)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeClube)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoClube.TipoClubeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoPlano.TipoPlanoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetalhesClube)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorClube)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ClubeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ClubeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ClubeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
