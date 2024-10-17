@@ -19,5 +19,6 @@ namespace Afrodite_Sistema.Models
         [Display(Name = "Código da Forma do Pagamento")]
         public int FormaPagamentoId { get; set; }
         public FormaPagamento? FormaPagamento { get; set; }
+      
     }
 }
