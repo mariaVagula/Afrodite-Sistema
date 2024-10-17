@@ -17,13 +17,22 @@ namespace Afrodite_Sistema.Controllers
         {
             _context = context;
         }
-
+      
         // GET: Procedimento
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
-              return _context.Procedimento != null ? 
-                          View(await _context.Procedimento.ToListAsync()) :
-                          Problem("Entity set 'Contexto.Procedimento'  is null.");
+            if (pesquisa == null)
+            {
+                var contexto = _context.Procedimento;
+                return View(await contexto.ToListAsync());
+            }
+            else
+            {
+                var contexto = _context.Procedimento
+                    .Where(x => x.NomeProcedimento.Contains(pesquisa));
+                return View(await contexto.ToListAsync());
+            }
+
         }
 
         // GET: Procedimento/Details/5

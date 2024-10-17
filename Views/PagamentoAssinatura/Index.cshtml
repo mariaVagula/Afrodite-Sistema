@@ -4,19 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Pagamento da Assinatura</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Cadastrar Pagamento Da Assinatura</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AssinaturaClube)
+                Assinatura Clube
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FormaPagamento)
+                Forma Pagamento
             </th>
             <th></th>
         </tr>
@@ -28,12 +28,12 @@
                 @Html.DisplayFor(modelItem => item.AssinaturaClube.AssinaturaClubeId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FormaPagamento.FormaPagamentoId)
+                @Html.DisplayFor(modelItem => item.FormaPagamento.NomeFormaPagamento)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PagamentoAssinaturaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PagamentoAssinaturaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PagamentoAssinaturaId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.PagamentoAssinaturaId">Editar</a> 
+                <a asp-action="Details" asp-route-id="@item.PagamentoAssinaturaId">Detalhes</a> 
+                <a asp-action="Delete" asp-route-id="@item.PagamentoAssinaturaId">Deletar</a>
             </td>
         </tr>
 }

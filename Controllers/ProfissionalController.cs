@@ -19,10 +19,20 @@ namespace Afrodite_Sistema.Controllers
         }
 
         // GET: Profissional
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
-            var contexto = _context.Profissional.Include(p => p.TipoProfissional);
-            return View(await contexto.ToListAsync());
+            if (pesquisa == null)
+            {
+                var contexto = _context.Profissional;
+                return View(await contexto.ToListAsync());
+            }
+            else
+            {
+                var contexto = _context.Profissional
+                    .Where(x => x.NomeProfissional.Contains(pesquisa));
+                return View(await contexto.ToListAsync());
+            }
+
         }
 
         // GET: Profissional/Details/5
@@ -47,7 +57,7 @@ namespace Afrodite_Sistema.Controllers
         // GET: Profissional/Create
         public IActionResult Create()
         {
-            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissionalId");
+            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissional");
             return View();
         }
 
@@ -64,7 +74,7 @@ namespace Afrodite_Sistema.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissionalId", profissional.TipoProfissionalId);
+            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissional", profissional.TipoProfissionalId);
             return View(profissional);
         }
 
@@ -81,7 +91,7 @@ namespace Afrodite_Sistema.Controllers
             {
                 return NotFound();
             }
-            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissionalId", profissional.TipoProfissionalId);
+            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissional", profissional.TipoProfissionalId);
             return View(profissional);
         }
 
@@ -117,7 +127,7 @@ namespace Afrodite_Sistema.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissionalId", profissional.TipoProfissionalId);
+            ViewData["TipoProfissionalId"] = new SelectList(_context.TipoProfissional, "TipoProfissionalId", "TipoProfissional", profissional.TipoProfissionalId);
             return View(profissional);
         }
 
