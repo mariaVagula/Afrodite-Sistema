@@ -49,9 +49,9 @@ namespace Afrodite_Sistema.Controllers
         // GET: Agendamento/Create
         public IActionResult Create()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId");
-            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "ProcedimentoId");
-            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "ProfissionalId");
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente");
+            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "NomeProcedimento");
+            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "NomeProfissional");
             return View();
         }
 
@@ -68,9 +68,9 @@ namespace Afrodite_Sistema.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId", agendamento.ClienteId);
-            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "ProcedimentoId", agendamento.ProcedimentoId);
-            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "ProfissionalId", agendamento.ProfissionalId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente", agendamento.ClienteId);
+            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "NomeProcedimento", agendamento.ProcedimentoId);
+            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "NomeProfissional", agendamento.ProfissionalId);
             return View(agendamento);
         }
 
@@ -87,9 +87,9 @@ namespace Afrodite_Sistema.Controllers
             {
                 return NotFound();
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId", agendamento.ClienteId);
-            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "ProcedimentoId", agendamento.ProcedimentoId);
-            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "ProfissionalId", agendamento.ProfissionalId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente", agendamento.ClienteId);
+            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "NomeProcedimento", agendamento.ProcedimentoId);
+            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "NomeProfissional", agendamento.ProfissionalId);
             return View(agendamento);
         }
 
@@ -125,9 +125,9 @@ namespace Afrodite_Sistema.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId", agendamento.ClienteId);
-            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "ProcedimentoId", agendamento.ProcedimentoId);
-            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "ProfissionalId", agendamento.ProfissionalId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente", agendamento.ClienteId);
+            ViewData["ProcedimentoId"] = new SelectList(_context.Procedimento, "ProcedimentoId", "NomeProcedimento", agendamento.ProcedimentoId);
+            ViewData["ProfissionalId"] = new SelectList(_context.Profissional, "ProfissionalId", "NomeProfissional", agendamento.ProfissionalId);
             return View(agendamento);
         }
 
