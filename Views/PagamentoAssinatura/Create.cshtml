@@ -6,18 +6,18 @@
 
 <h1>Cadastrar</h1>
 
-<h4>Pagamento Assinatura</h4>
+<h4>Pagamento da Assinatura</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="AssinaturaClubeId" class="control-label"></label>
+                <label asp-for="AssinaturaClubeId" class="control-label">Assinatura do Clube</label>
                 <select asp-for="AssinaturaClubeId" class ="form-control" asp-items="ViewBag.AssinaturaClubeId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="FormaPagamentoId" class="control-label"></label>
+                <label asp-for="FormaPagamentoId" class="control-label">Forma do Pagamento</label>
                 <select asp-for="FormaPagamentoId" class ="form-control" asp-items="ViewBag.FormaPagamentoId"></select>
             </div>
             <div class="form-group">
