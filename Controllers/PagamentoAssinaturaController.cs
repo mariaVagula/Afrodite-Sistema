@@ -48,8 +48,8 @@ namespace Afrodite_Sistema.Controllers
         // GET: PagamentoAssinatura/Create
         public IActionResult Create()
         {
-            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClubeId");
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId");
+            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClube");
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamento");
             return View();
         }
 
@@ -66,8 +66,8 @@ namespace Afrodite_Sistema.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClubeId", pagamentoAssinatura.AssinaturaClubeId);
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId", pagamentoAssinatura.FormaPagamentoId);
+            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClube", pagamentoAssinatura.AssinaturaClubeId);
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamento", pagamentoAssinatura.FormaPagamentoId);
             return View(pagamentoAssinatura);
         }
 
@@ -84,8 +84,8 @@ namespace Afrodite_Sistema.Controllers
             {
                 return NotFound();
             }
-            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClubeId", pagamentoAssinatura.AssinaturaClubeId);
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId", pagamentoAssinatura.FormaPagamentoId);
+            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClube", pagamentoAssinatura.AssinaturaClubeId);
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamento", pagamentoAssinatura.FormaPagamentoId);
             return View(pagamentoAssinatura);
         }
 
@@ -121,8 +121,8 @@ namespace Afrodite_Sistema.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClubeId", pagamentoAssinatura.AssinaturaClubeId);
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId", pagamentoAssinatura.FormaPagamentoId);
+            ViewData["AssinaturaClubeId"] = new SelectList(_context.AssinaturaClube, "AssinaturaClubeId", "AssinaturaClube", pagamentoAssinatura.AssinaturaClubeId);
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamento", pagamentoAssinatura.FormaPagamentoId);
             return View(pagamentoAssinatura);
         }
 

@@ -19,11 +19,20 @@ namespace Afrodite_Sistema.Controllers
         }
 
         // GET: Cliente
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
-              return _context.Cliente != null ? 
-                          View(await _context.Cliente.ToListAsync()) :
-                          Problem("Entity set 'Contexto.Cliente'  is null.");
+            if (pesquisa == null)
+            {
+                var contexto = _context.Cliente;
+                return View(await contexto.ToListAsync());
+            }
+            else
+            {
+                var contexto = _context.Cliente
+                    .Where(x => x.NomeCliente.Contains(pesquisa));
+                return View(await contexto.ToListAsync());
+            }
+
         }
 
         // GET: Cliente/Details/5
