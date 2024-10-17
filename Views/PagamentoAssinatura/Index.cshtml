@@ -13,7 +13,10 @@
     <thead>
         <tr>
             <th>
-                Assinatura Clube
+                Nome Cliente
+            </th>
+            <th>
+                Nome Clube
             </th>
             <th>
                 Forma Pagamento
@@ -25,7 +28,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.AssinaturaClube.AssinaturaClubeId)
+                @Html.DisplayFor(modelItem => item.AssinaturaClube.Cliente.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssinaturaClube.Clube.NomeClube)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.FormaPagamento.NomeFormaPagamento)
