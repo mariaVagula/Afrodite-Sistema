@@ -4,20 +4,20 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Assinatura Clube</h1>
+<h1>Cadastrar Assinatura do Clube</h1>
 
-<h4>AssinaturaClube</h4>
+<h4>Assinatura do Clube</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ClienteId" class="control-label"></label>
+                <label asp-for="ClienteId" class="control-label">Cliente</label>
                 <select asp-for="ClienteId" class ="form-control" asp-items="ViewBag.ClienteId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="ClubeId" class="control-label"></label>
+                <label asp-for="ClubeId" class="control-label">Clube</label>
                 <select asp-for="ClubeId" class ="form-control" asp-items="ViewBag.ClubeId"></select>
             </div>
             <div class="form-group">

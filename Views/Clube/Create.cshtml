@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Cadastrar</h1>
+<h1>Cadastrar Clube</h1>
 
 <h4>Clube</h4>
 <hr />
@@ -18,11 +18,11 @@
                 <span asp-validation-for="NomeClube" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoClubeId" class="control-label"></label>
+                <label asp-for="TipoClubeId" class="control-label">Tipo do Clube</label>
                 <select asp-for="TipoClubeId" class ="form-control" asp-items="ViewBag.TipoClubeId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="TipoPlanoId" class="control-label"></label>
+                <label asp-for="TipoPlanoId" class="control-label">Tipo do Plano</label>
                 <select asp-for="TipoPlanoId" class ="form-control" asp-items="ViewBag.TipoPlanoId"></select>
             </div>
             <div class="form-group">
