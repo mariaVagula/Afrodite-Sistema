@@ -60,7 +60,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AgendamentoId,ProcedimentoId,DataHoraAgendamentoId,ProfissionalId,ObservacaoAgendamentoId,ClienteId")] Agendamento agendamento)
+        public async Task<IActionResult> Create([Bind("AgendamentoId,ProcedimentoId,DataHoraAgendamento,ProfissionalId,ObservacaoAgendamento,ClienteId")] Agendamento agendamento)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AgendamentoId,ProcedimentoId,DataHoraAgendamentoId,ProfissionalId,ObservacaoAgendamentoId,ClienteId")] Agendamento agendamento)
+        public async Task<IActionResult> Edit(int id, [Bind("AgendamentoId,ProcedimentoId,DataHoraAgendamento,ProfissionalId,ObservacaoAgendamento,ClienteId")] Agendamento agendamento)
         {
             if (id != agendamento.AgendamentoId)
             {

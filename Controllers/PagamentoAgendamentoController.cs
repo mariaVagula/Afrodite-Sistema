@@ -21,7 +21,12 @@ namespace Afrodite_Sistema.Controllers
         // GET: PagamentoAgendamento
         public async Task<IActionResult> Index()
         {
-            var contexto = _context.PagamentoAgendamento.Include(p => p.Agendamento).Include(p => p.FormaPagamento);
+            var contexto = _context.PagamentoAgendamento
+                .Include(p => p.Agendamento)
+                  .Include(p => p.Agendamento.Cliente)
+                    .Include(p => p.Agendamento.Procedimento)
+                       .Include(p => p.Agendamento.Profissional)
+                         .Include(p => p.FormaPagamento);
             return View(await contexto.ToListAsync());
         }
 

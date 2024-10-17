@@ -15,18 +15,18 @@ namespace Afrodite_Sistema.Models
         public int ProcedimentoId { get; set; }
         public Procedimento? Procedimento { get; set; }
 
-        [Column("DataHoraAgendamentoId")]
-        [Display(Name = "Código da Data e Hora do Agendamento")]
-        public  DateTime DataHoraAgendamentoId { get; set; }
+        [Column("DataHoraAgendamento")]
+        [Display(Name = "Data e Hora do Agendamento")]
+        public  DateTime DataHoraAgendamento { get; set; } 
 
         [ForeignKey("ProfissionalId")]
         [Display(Name = "Código do Profissional")]
         public int ProfissionalId { get; set; }
         public Profissional? Profissional { get; set; }
 
-        [Column("ObservacaoAgendamentoId")]
+        [Column("ObservacaoAgendamento")]
         [Display(Name = "Observação do Agendamento")]
-        public string ObservacaoAgendamentoId { get; set; } = string.Empty;
+        public string ObservacaoAgendamento { get; set; } = string.Empty;
 
         [ForeignKey("ClienteId")]
         [Display(Name = "Código do Cliente")]
