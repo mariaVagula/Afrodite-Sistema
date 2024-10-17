@@ -16,7 +16,7 @@ namespace Afrodite_Sistema.Models
         public Procedimento? Procedimento { get; set; }
 
         [Column("DataHoraAgendamentoId")]
-        [Display(Name = "Código da Data e Hora do Agendamento")]
+        [Display(Name = "Data e Hora")]
         public  DateTime DataHoraAgendamentoId { get; set; }
 
         [ForeignKey("ProfissionalId")]
