@@ -13,16 +13,16 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ProcedimentoId" class="control-label"></label>
+                <label asp-for="ProcedimentoId" class="control-label">Procedimento</label>
                 <select asp-for="ProcedimentoId" class ="form-control" asp-items="ViewBag.ProcedimentoId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="DataHoraAgendamentoId" class="control-label"></label>
+                <label asp-for="DataHoraAgendamentoId" class="control-label">Data e Hora do Agendamento</label>
                 <input asp-for="DataHoraAgendamentoId" class="form-control" />
                 <span asp-validation-for="DataHoraAgendamentoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProfissionalId" class="control-label"></label>
+                <label asp-for="ProfissionalId" class="control-label">Profissional</label>
                 <select asp-for="ProfissionalId" class ="form-control" asp-items="ViewBag.ProfissionalId"></select>
             </div>
             <div class="form-group">
@@ -31,7 +31,7 @@
                 <span asp-validation-for="ObservacaoAgendamentoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClienteId" class="control-label"></label>
+                <label asp-for="ClienteId" class="control-label">Cliente</label>
                 <select asp-for="ClienteId" class ="form-control" asp-items="ViewBag.ClienteId"></select>
             </div>
             <div class="form-group">
