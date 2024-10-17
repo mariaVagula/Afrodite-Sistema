@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Clube</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Cadastrar</a>
 </p>
 <table class="table">
     <thead>
@@ -37,10 +37,10 @@
                 @Html.DisplayFor(modelItem => item.NomeClube)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoClube.TipoClubeId)
+                @Html.DisplayFor(modelItem => item.TipoClube.NomeTipoClube)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoPlano.TipoPlanoId)
+                @Html.DisplayFor(modelItem => item.TipoPlano.NomeTipoPlano)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DetalhesClube)
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.ValorClube)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ClubeId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ClubeId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ClubeId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.ClubeId">Editar</a> 
+                <a asp-action="Details" asp-route-id="@item.ClubeId">Detalhes</a> 
+                <a asp-action="Delete" asp-route-id="@item.ClubeId">Deletar</a>
             </td>
         </tr>
 }

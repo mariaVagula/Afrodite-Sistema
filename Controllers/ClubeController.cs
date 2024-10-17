@@ -48,8 +48,8 @@ namespace Afrodite_Sistema.Controllers
         // GET: Clube/Create
         public IActionResult Create()
         {
-            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "TipoClubeId");
-            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "TipoPlanoId");
+            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "NomeTipoClube");
+            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "NomeTipoPlano");
             return View();
         }
 
@@ -66,8 +66,8 @@ namespace Afrodite_Sistema.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "TipoClubeId", clube.TipoClubeId);
-            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "TipoPlanoId", clube.TipoPlanoId);
+            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "NomeTipoClube", clube.TipoClubeId);
+            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "NomeTipoPlano", clube.TipoPlanoId);
             return View(clube);
         }
 
@@ -84,8 +84,8 @@ namespace Afrodite_Sistema.Controllers
             {
                 return NotFound();
             }
-            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "TipoClubeId", clube.TipoClubeId);
-            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "TipoPlanoId", clube.TipoPlanoId);
+            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "NomeTipoClube", clube.TipoClubeId);
+            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "NomeTipoPlano", clube.TipoPlanoId);
             return View(clube);
         }
 
@@ -121,8 +121,8 @@ namespace Afrodite_Sistema.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "TipoClubeId", clube.TipoClubeId);
-            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "TipoPlanoId", clube.TipoPlanoId);
+            ViewData["TipoClubeId"] = new SelectList(_context.TipoClube, "TipoClubeId", "NomeTipoClube", clube.TipoClubeId);
+            ViewData["TipoPlanoId"] = new SelectList(_context.TipoPlano, "TipoPlanoId", "NomeTipoPlano", clube.TipoPlanoId);
             return View(clube);
         }
 

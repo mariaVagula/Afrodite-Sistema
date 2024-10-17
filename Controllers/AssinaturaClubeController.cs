@@ -48,8 +48,8 @@ namespace Afrodite_Sistema.Controllers
         // GET: AssinaturaClube/Create
         public IActionResult Create()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId");
-            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "ClubeId");
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente");
+            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "NomeClube");
             return View();
         }
 
@@ -66,8 +66,8 @@ namespace Afrodite_Sistema.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId", assinaturaClube.ClienteId);
-            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "ClubeId", assinaturaClube.ClubeId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente", assinaturaClube.ClienteId);
+            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "NomeClube", assinaturaClube.ClubeId);
             return View(assinaturaClube);
         }
 
@@ -84,8 +84,8 @@ namespace Afrodite_Sistema.Controllers
             {
                 return NotFound();
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId", assinaturaClube.ClienteId);
-            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "ClubeId", assinaturaClube.ClubeId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente", assinaturaClube.ClienteId);
+            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "NomeClube", assinaturaClube.ClubeId);
             return View(assinaturaClube);
         }
 
@@ -121,8 +121,8 @@ namespace Afrodite_Sistema.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "ClienteId", assinaturaClube.ClienteId);
-            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "ClubeId", assinaturaClube.ClubeId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "ClienteId", "NomeCliente", assinaturaClube.ClienteId);
+            ViewData["ClubeId"] = new SelectList(_context.Clube, "ClubeId", "NomeClube", assinaturaClube.ClubeId);
             return View(assinaturaClube);
         }
 
