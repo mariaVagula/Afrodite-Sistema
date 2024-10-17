@@ -24,7 +24,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="SexoCliente" class="control-label"></label>
-                <input asp-for="SexoCliente" class="form-control" />
+                <select name="SexoCliente" class="form-control">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
                 <span asp-validation-for="SexoCliente" class="text-danger"></span>
             </div>
             <div class="form-group">

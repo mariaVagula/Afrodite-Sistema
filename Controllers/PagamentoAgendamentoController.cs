@@ -49,7 +49,7 @@ namespace Afrodite_Sistema.Controllers
         public IActionResult Create()
         {
             ViewData["AgendamentoId"] = new SelectList(_context.Agendamento, "AgendamentoId", "AgendamentoId");
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId");
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "NomeFormaPagamento");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace Afrodite_Sistema.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AgendamentoId"] = new SelectList(_context.Agendamento, "AgendamentoId", "AgendamentoId", pagamentoAgendamento.AgendamentoId);
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId", pagamentoAgendamento.FormaPagamentoId);
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "NomeFormaPagamento", pagamentoAgendamento.FormaPagamentoId);
             return View(pagamentoAgendamento);
         }
 
@@ -85,7 +85,7 @@ namespace Afrodite_Sistema.Controllers
                 return NotFound();
             }
             ViewData["AgendamentoId"] = new SelectList(_context.Agendamento, "AgendamentoId", "AgendamentoId", pagamentoAgendamento.AgendamentoId);
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId", pagamentoAgendamento.FormaPagamentoId);
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "NomeFormaPagamento", pagamentoAgendamento.FormaPagamentoId);
             return View(pagamentoAgendamento);
         }
 
@@ -122,7 +122,7 @@ namespace Afrodite_Sistema.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AgendamentoId"] = new SelectList(_context.Agendamento, "AgendamentoId", "AgendamentoId", pagamentoAgendamento.AgendamentoId);
-            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "FormaPagamentoId", pagamentoAgendamento.FormaPagamentoId);
+            ViewData["FormaPagamentoId"] = new SelectList(_context.FormaPagamento, "FormaPagamentoId", "NomeFormaPagamento", pagamentoAgendamento.FormaPagamentoId);
             return View(pagamentoAgendamento);
         }
 
