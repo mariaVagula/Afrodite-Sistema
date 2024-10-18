@@ -7,21 +7,20 @@
 <h1>Pagamento da Assinatura</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Pagamento Da Assinatura</a>
+    <a asp-action="Create" class="cadastrar">Cadastrar Pagamento Da Assinatura</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Nome Cliente
+              Cliente
             </th>
             <th>
-                Nome Clube
+               Clube
             </th>
             <th>
                 Forma Pagamento
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -37,9 +36,9 @@
                 @Html.DisplayFor(modelItem => item.FormaPagamento.NomeFormaPagamento)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PagamentoAssinaturaId">Editar</a> 
-                <a asp-action="Details" asp-route-id="@item.PagamentoAssinaturaId">Detalhes</a> 
-                <a asp-action="Delete" asp-route-id="@item.PagamentoAssinaturaId">Deletar</a>
+                    <a asp-action="Edit" asp-route-id="@item.PagamentoAssinaturaId" class="btn btn-primary">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.PagamentoAssinaturaId" class="btn btn-primary">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.PagamentoAssinaturaId" class="btn btn-segundo">Deletar</a>
             </td>
         </tr>
 }

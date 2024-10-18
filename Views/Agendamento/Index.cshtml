@@ -7,7 +7,7 @@
 <h1>Agendamento</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Agendamento</a>
+    <a asp-action="Create" class="cadastrar">Cadastrar Agendamento</a>
 </p>
 <table class="table">
     <thead>
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.Cliente.NomeCliente)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.AgendamentoId">Editar</a> 
-                <a asp-action="Details" asp-route-id="@item.AgendamentoId">Detalhes</a> 
-                <a asp-action="Delete" asp-route-id="@item.AgendamentoId">Deletar</a>
+                    <a asp-action="Edit" asp-route-id="@item.AgendamentoId" class="btn btn-primary">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.AgendamentoId" class="btn btn-primary">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.AgendamentoId" class="btn btn-segundo">Deletar</a>
             </td>
         </tr>
 }

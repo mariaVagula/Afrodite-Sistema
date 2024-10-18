@@ -7,7 +7,7 @@
 <h1>Assinatura do Clube</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Assinatura do Clube</a>
+    <a asp-action="Create" class="cadastrar">Cadastrar Assinatura do Clube</a>
 </p>
 <table class="table">
     <thead>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.Clube.NomeClube)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.AssinaturaClubeId">Editar</a> 
-                <a asp-action="Details" asp-route-id="@item.AssinaturaClubeId">Detalhes</a> 
-                <a asp-action="Delete" asp-route-id="@item.AssinaturaClubeId">Deletar</a>
+                    <a asp-action="Edit" asp-route-id="@item.AssinaturaClubeId" class="btn btn-primary">Editar</a>
+                <a asp-action="Details" asp-route-id="@item.AssinaturaClubeId" class="btn btn-primary">Detalhes</a> 
+                    <a asp-action="Delete" asp-route-id="@item.AssinaturaClubeId" class="btn btn-segundo">Deletar</a>
             </td>
         </tr>
 }

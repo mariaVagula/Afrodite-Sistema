@@ -7,7 +7,7 @@
 <h1>Tipo do Plano</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Tipo do Plano</a>
+    <a asp-action="Create" class="cadastrar">Cadastrar Tipo do Plano</a>
 </p>
 <table class="table">
     <thead>
@@ -27,7 +27,7 @@
             <td>
                     <a asp-action="Edit" asp-route-id="@item.TipoPlanoId" class="btn btn-primary">Editar</a>
                     <a asp-action="Details" asp-route-id="@item.TipoPlanoId" class="btn btn-primary">Detalhes</a>
-                    <a asp-action="Delete" asp-route-id="@item.TipoPlanoId"class="btn btn-primary">Deletar</a>
+                    <a asp-action="Delete" asp-route-id="@item.TipoPlanoId"class="btn btn-segundo">Deletar</a>
             </td>
         </tr>
 }
