@@ -7,14 +7,14 @@
 <h1>Profissional</h1>
 
 <p>
-    <a asp-action="Create">Cadastrar Profissional</a>
+    <a asp-action="Create"class="cadastrar">Cadastrar Profissional</a>
 </p>
 <div>
     @using (Html.BeginForm("Index", "Profissional", FormMethod.Get))
     {
         <p>
-            Digite aqui sua pesquisa: @Html.TextBox("pesquisa")
-            <input type="submit" value="Pesquisar"/>
+            Digite aqui sua pesquisa: <input type="text" id="pesquisa" name="pesquisa" class="txtpesquisa" />
+            <input type="submit" value="Pesquisar" class="botao-pesquisar" />
         </p>
     }
 </div>
@@ -40,9 +40,9 @@
                 @Html.DisplayFor(modelItem => item.TipoProfissional.NomeTipoProfissional)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ProfissionalId">Editar</a> 
-                <a asp-action="Details" asp-route-id="@item.ProfissionalId">Detalhes</a> 
-                <a asp-action="Delete" asp-route-id="@item.ProfissionalId">Deletar</a>
+                    <a asp-action="Edit" asp-route-id="@item.ProfissionalId" class="btn btn-primary">Editar</a>
+                <a asp-action="Details" asp-route-id="@item.ProfissionalId" class="btn btn-primary">Detalhes</a> 
+                    <a asp-action="Delete" asp-route-id="@item.ProfissionalId" class="btn btn-segundo">Deletar</a>
             </td>
         </tr>
 }
