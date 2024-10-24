@@ -58,7 +58,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ClubeId,NomeClube,TipoClubeId,TipoPlanoId,DetalhesClube,ValorClube")] Clube clube)
+        public async Task<IActionResult> Create([Bind("ClubeId,NomeClube, FotoClube, TipoClubeId,TipoPlanoId,DetalhesClube,ValorClube")] Clube clube)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ClubeId,NomeClube,TipoClubeId,TipoPlanoId,DetalhesClube,ValorClube")] Clube clube)
+        public async Task<IActionResult> Edit(int id, [Bind("ClubeId,NomeClube, FotoClube, TipoClubeId,TipoPlanoId,DetalhesClube,ValorClube")] Clube clube)
         {
             if (id != clube.ClubeId)
             {

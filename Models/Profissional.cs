@@ -14,6 +14,11 @@ namespace Afrodite_Sistema.Models
         [Display(Name = "Nome do Profissional")]
         public string NomeProfissional { get; set; } = string.Empty;
 
+        [Column("FotoProfissional")]
+        [Display(Name = "Foto do Profissional" ) ]
+
+        public string FotoProfissional { get; set; } = string.Empty;
+
         [ForeignKey("TipoProfissionalId")]
         [Display(Name = "Código do Tipo Profissional")]
         public int TipoProfissionalId { get; set; }

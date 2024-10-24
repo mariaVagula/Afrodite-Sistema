@@ -66,7 +66,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProfissionalId,NomeProfissional,TipoProfissionalId")] Profissional profissional)
+        public async Task<IActionResult> Create([Bind("ProfissionalId,NomeProfissional, FotoProfissional,TipoProfissionalId")] Profissional profissional)
         {
             if (ModelState.IsValid)
             {
@@ -100,7 +100,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProfissionalId,NomeProfissional,TipoProfissionalId")] Profissional profissional)
+        public async Task<IActionResult> Edit(int id, [Bind("ProfissionalId,NomeProfissional, FotoProfissional ,TipoProfissionalId")] Profissional profissional)
         {
             if (id != profissional.ProfissionalId)
             {
