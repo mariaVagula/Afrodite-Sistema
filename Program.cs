@@ -7,7 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
+<<<<<<< HEAD
     (options => options.UseSqlServer("Data Source=SB-1490646\\SQLSENAI;Initial Catalog = Afrodite-Sistema;Integrated Security = True;TrustServerCertificate = True"));
+=======
+    (options => options.UseSqlServer("Data Source=SB-1490625\\SQLSENAI;Initial Catalog = Afrodite-Sistema;Integrated Security = True;TrustServerCertificate = True"));
+>>>>>>> 58184bb237b15c7f850f3964b4e9fd379241ef92
 
 var app = builder.Build();
 
