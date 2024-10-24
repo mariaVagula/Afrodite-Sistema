@@ -11,7 +11,7 @@ namespace Afrodite_Sistema.Models
         public int AgendamentoId { get; set; }
 
         [ForeignKey("ProcedimentoId")]
-        [Display(Name = "Código do Procedimento")]
+        [Display(Name = "Procedimento")]
         public int ProcedimentoId { get; set; }
         public Procedimento? Procedimento { get; set; }
 
@@ -20,7 +20,7 @@ namespace Afrodite_Sistema.Models
         public  DateTime DataHoraAgendamento { get; set; } 
 
         [ForeignKey("ProfissionalId")]
-        [Display(Name = "Código do Profissional")]
+        [Display(Name = "Profissional")]
         public int ProfissionalId { get; set; }
         public Profissional? Profissional { get; set; }
 
@@ -29,7 +29,7 @@ namespace Afrodite_Sistema.Models
         public string ObservacaoAgendamento { get; set; } = string.Empty;
 
         [ForeignKey("ClienteId")]
-        [Display(Name = "Código do Cliente")]
+        [Display(Name = "Cliente")]
         public int ClienteId { get; set; }
         public Cliente? Cliente { get; set; }
     }

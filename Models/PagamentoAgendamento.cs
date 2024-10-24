@@ -11,12 +11,12 @@ namespace Afrodite_Sistema.Models
         public int PagamentoAgendamentoId { get; set; }
 
         [ForeignKey("AgendamentoId")]
-        [Display(Name = "Código do Agendamento")]
+        [Display(Name = "Agendamento")]
         public int AgendamentoId { get; set; }
         public Agendamento? Agendamento { get; set; }
 
         [ForeignKey("FormaPagamentoId")]
-        [Display(Name = "Código da Forma do Pagamento")]
+        [Display(Name = "Forma do Pagamento")]
         public int FormaPagamentoId { get; set; }
         public FormaPagamento? FormaPagamento { get; set; }
     }

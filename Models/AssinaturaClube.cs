@@ -11,12 +11,12 @@ namespace Afrodite_Sistema.Models
         public int AssinaturaClubeId { get; set; }
 
         [ForeignKey("ClienteId")]
-        [Display(Name = "Código do Cliente")]
+        [Display(Name = "Cliente")]
         public int ClienteId { get; set; }
         public Cliente? Cliente { get; set; }
 
         [ForeignKey("ClubeId")]
-        [Display(Name = "Código do Clube")]
+        [Display(Name = "Clube")]
         public int ClubeId { get; set; }
         public Clube? Clube { get; set; }
     }

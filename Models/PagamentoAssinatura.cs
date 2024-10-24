@@ -11,12 +11,12 @@ namespace Afrodite_Sistema.Models
         public int PagamentoAssinaturaId { get; set; }
 
         [ForeignKey("AssinaturaClubeId")]
-        [Display(Name = "Código da Assinatura do Clube")]
+        [Display(Name = "Assinatura do Clube")]
         public int AssinaturaClubeId { get; set; }
         public AssinaturaClube? AssinaturaClube { get; set; }
 
         [ForeignKey("FormaPagamentoId")]
-        [Display(Name = "Código da Forma do Pagamento")]
+        [Display(Name = "Forma do Pagamento")]
         public int FormaPagamentoId { get; set; }
         public FormaPagamento? FormaPagamento { get; set; }
       

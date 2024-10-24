@@ -15,12 +15,12 @@ namespace Afrodite_Sistema.Models
         public string NomeClube { get; set; } = string.Empty;
 
         [ForeignKey("TipoClubeId")]
-        [Display(Name = "Código do Tipo do Clube")]
+        [Display(Name = "Tipo do Clube")]
         public int TipoClubeId { get; set; }
         public TipoClube? TipoClube { get; set; }
 
         [ForeignKey("TipoPlanoId")]
-        [Display(Name = "Código do Tipo do Plano")]
+        [Display(Name = "Tipo do Plano")]
         public int TipoPlanoId { get; set; }
         public TipoPlano? TipoPlano { get; set; }
 
