@@ -20,7 +20,7 @@ namespace Afrodite_Sistema.Models
         public string FotoProfissional { get; set; } = string.Empty;
 
         [ForeignKey("TipoProfissionalId")]
-        [Display(Name = "Código do Tipo Profissional")]
+        [Display(Name = "Tipo Profissional")]
         public int TipoProfissionalId { get; set; }
         public TipoProfissional? TipoProfissional { get; set; }
     }
