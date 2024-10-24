@@ -18,6 +18,13 @@
             @Html.DisplayFor(model => model.NomeProfissional)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FotoProfissional)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Html.DisplayFor(model => model.FotoProfissional)" />
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoProfissional)
             Tipo do Profissional
         </dt>
         <dd class = "col-sm-10">
