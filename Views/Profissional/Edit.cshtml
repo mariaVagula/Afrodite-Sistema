@@ -19,6 +19,11 @@
                 <span asp-validation-for="NomeProfissional" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="FotoProfissional" class="control-label"></label>
+                <input asp-for="FotoProfissional" class="form-control" />
+                <span asp-validation-for="FotoProfissional" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="TipoProfissionalId" class="control-label"></label>
                 <select asp-for="TipoProfissionalId" class="form-control" asp-items="ViewBag.TipoProfissionalId"></select>
                 <span asp-validation-for="TipoProfissionalId" class="text-danger"></span>

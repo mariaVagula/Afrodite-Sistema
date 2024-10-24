@@ -17,6 +17,12 @@
             @Html.DisplayFor(model => model.NomeClube)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FotoClube)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Html.DisplayFor(model => model.FotoClube)" />
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.TipoClube)
         </dt>
         <dd class = "col-sm-10">

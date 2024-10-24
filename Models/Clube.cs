@@ -14,6 +14,10 @@ namespace Afrodite_Sistema.Models
         [Display(Name = "Nome do Clube")]
         public string NomeClube { get; set; } = string.Empty;
 
+        [Column("FotoClube")]
+        [Display(Name = "Foto do Clube")]
+        public string FotoClube { get; set; } = string.Empty;
+
         [ForeignKey("TipoClubeId")]
         [Display(Name = "Código do Tipo do Clube")]
         public int TipoClubeId { get; set; }
