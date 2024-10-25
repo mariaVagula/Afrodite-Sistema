@@ -6,14 +6,14 @@
 
 <h1>Cadastrar</h1>
 
-<h4>Cadastrar Tipo do Profissional</h4>
+<h4>Tipo do Profissional</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="NomeTipoProfissional" class="control-label"></label>
+                <label asp-for="NomeTipoProfissional" class="control-label">Tipo do Profissional</label>
                 <input asp-for="NomeTipoProfissional" class="form-control" />
                 <span asp-validation-for="NomeTipoProfissional" class="text-danger"></span>
             </div>

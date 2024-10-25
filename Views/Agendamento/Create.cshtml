@@ -12,28 +12,34 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="ClienteId" class="control-label">Cliente</label>
+                <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+            </div>
+
             <div class="form-group">
                 <label asp-for="ProcedimentoId" class="control-label">Procedimento</label>
                 <select asp-for="ProcedimentoId" class ="form-control" asp-items="ViewBag.ProcedimentoId"></select>
             </div>
+
+            <div class="form-group">
+                <label asp-for="ProfissionalId" class="control-label">Profissional</label>
+                <select asp-for="ProfissionalId" class="form-control" asp-items="ViewBag.ProfissionalId"></select>
+            </div>
+
             <div class="form-group">
                 <label asp-for="DataHoraAgendamento" class="control-label"></label>
                 <input asp-for="DataHoraAgendamento" class="form-control" />
                 <span asp-validation-for="DataHoraAgendamento" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ProfissionalId" class="control-label">Profissional</label>
-                <select asp-for="ProfissionalId" class ="form-control" asp-items="ViewBag.ProfissionalId"></select>
-            </div>
+           
             <div class="form-group">
                 <label asp-for="ObservacaoAgendamento" class="control-label"></label>
                 <input asp-for="ObservacaoAgendamento" class="form-control" />
                 <span asp-validation-for="ObservacaoAgendamento" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ClienteId" class="control-label">Cliente</label>
-                <select asp-for="ClienteId" class ="form-control" asp-items="ViewBag.ClienteId"></select>
-            </div>
+            
             <div class="form-group">
                 <input type="submit" value="Cadastrar" class="btn btn-primary" />
             </div>

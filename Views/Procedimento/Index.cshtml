@@ -7,7 +7,7 @@
 <h1>Procedimento</h1>
 
 <p>
-    <a asp-action="Create" class="cadastrar">Cadastrar Procedimento</a>
+    <a asp-action="Create" class="cadastrar">Cadastrar</a>
 </p>
 <div>
     @using (Html.BeginForm("Index", "Procedimento", FormMethod.Get))
@@ -28,7 +28,7 @@
                 @Html.DisplayNameFor(model => model.ValorProcedimento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TipoProcedimentoId)
+                Tipo do Procedimento
             </th>
             <th></th>
         </tr>

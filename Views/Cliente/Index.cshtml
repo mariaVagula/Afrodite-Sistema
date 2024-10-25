@@ -7,7 +7,7 @@
 <h1>Cliente</h1>
 
 <p>
-    <a asp-action="Create" class="cadastrar">Cadastrar Cliente</a>
+    <a asp-action="Create" class="cadastrar">Cadastrar</a>
 </p>
 <div>
     @using (Html.BeginForm("Index", "Cliente", FormMethod.Get))
@@ -25,22 +25,22 @@
                 @Html.DisplayNameFor(model => model.NomeCliente)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataNascimentoCliente)
+                Data de Nascimento
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SexoCliente)
+                Sexo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CpfCliente)
+                Cpf
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TelCliente)
+                Telefone
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EmailCliente)
+                Email
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SenhaCliente)
+                Senha
             </th>
             <th></th>
         </tr>

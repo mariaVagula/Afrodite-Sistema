@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Cadastrar Tipo de Plano</h1>
+<h1>Cadastrar</h1>
 
 <h4>Tipo do Plano</h4>
 <hr />
@@ -13,7 +13,7 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="NomeTipoPlano" class="control-label"></label>
+                <label asp-for="NomeTipoPlano" class="control-label">Tipo do Plano</label>
                 <input asp-for="NomeTipoPlano" class="form-control" />
                 <span asp-validation-for="NomeTipoPlano" class="text-danger"></span>
             </div>

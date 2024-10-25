@@ -7,26 +7,28 @@
 <h1>Agendamento</h1>
 
 <p>
-    <a asp-action="Create" class="cadastrar">Cadastrar Agendamento</a>
+    <a asp-action="Create" class="cadastrar">Cadastrar</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Procedimento)
+                @Html.DisplayNameFor(model => model.Cliente)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataHoraAgendamento)
+                @Html.DisplayNameFor(model => model.Procedimento)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Profissional)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.DataHoraAgendamento)
+            </th>
+            
+            <th>
                 @Html.DisplayNameFor(model => model.ObservacaoAgendamento)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cliente)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -34,20 +36,22 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Procedimento.NomeProcedimento)
+                @Html.DisplayFor(modelItem => item.Cliente.NomeCliente)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DataHoraAgendamento)
+                @Html.DisplayFor(modelItem => item.Procedimento.NomeProcedimento)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Profissional.NomeProfissional)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.DataHoraAgendamento)
+            </td>
+            
+            <td>
                 @Html.DisplayFor(modelItem => item.ObservacaoAgendamento)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cliente.NomeCliente)
-            </td>
+            
             <td>
                     <a asp-action="Edit" asp-route-id="@item.AgendamentoId" class="btn btn-primary">Editar</a>
                     <a asp-action="Details" asp-route-id="@item.AgendamentoId" class="btn btn-primary">Detalhes</a>
