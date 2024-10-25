@@ -41,6 +41,9 @@ namespace Afrodite_Sistema.Controllers
             var pagamentoAgendamento = await _context.PagamentoAgendamento
                 .Include(p => p.Agendamento)
                 .Include(p => p.FormaPagamento)
+                .Include(p => p.Agendamento.Cliente)
+                .Include(p => p.Agendamento.Procedimento)
+                .Include(p => p.Agendamento.Profissional)
                 .FirstOrDefaultAsync(m => m.PagamentoAgendamentoId == id);
             if (pagamentoAgendamento == null)
             {
@@ -142,6 +145,9 @@ namespace Afrodite_Sistema.Controllers
             var pagamentoAgendamento = await _context.PagamentoAgendamento
                 .Include(p => p.Agendamento)
                 .Include(p => p.FormaPagamento)
+                .Include(p => p.Agendamento.Cliente)
+                .Include(p => p.Agendamento.Procedimento)
+                .Include(p => p.Agendamento.Profissional)
                 .FirstOrDefaultAsync(m => m.PagamentoAgendamentoId == id);
             if (pagamentoAgendamento == null)
             {

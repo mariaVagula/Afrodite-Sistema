@@ -23,6 +23,10 @@
                 <span asp-validation-for="ValorProcedimento" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="TipoProcedimentoId" class="control-label">Tipo do Procedimento</label>
+                <select asp-for="TipoProcedimentoId" class="form-control" asp-items="ViewBag.TipoProcedimentoId"></select>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Cadastrar" class="btn btn-primary" />
             </div>
         </form>

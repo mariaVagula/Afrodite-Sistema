@@ -23,12 +23,12 @@ namespace Afrodite_Sistema.Controllers
         {
             if (pesquisa == null)
             {
-                var contexto = _context.Procedimento;
+                var contexto = _context.Procedimento.Include(t => t.TipoProcedimento);
                 return View(await contexto.ToListAsync());
             }
             else
             {
-                var contexto = _context.Procedimento
+                var contexto = _context.Procedimento.Include(t => t.TipoProcedimento)
                     .Where(x => x.NomeProcedimento.Contains(pesquisa));
                 return View(await contexto.ToListAsync());
             }
@@ -43,7 +43,7 @@ namespace Afrodite_Sistema.Controllers
                 return NotFound();
             }
 
-            var procedimento = await _context.Procedimento
+            var procedimento = await _context.Procedimento.Include(t=>t.TipoProcedimento)
                 .FirstOrDefaultAsync(m => m.ProcedimentoId == id);
             if (procedimento == null)
             {
@@ -56,6 +56,7 @@ namespace Afrodite_Sistema.Controllers
         // GET: Procedimento/Create
         public IActionResult Create()
         {
+            ViewData["TipoProcedimentoId"] = new SelectList(_context.TipoProcedimento, "TipoProcedimentoId", "NomeTipoProcedimento" );
             return View();
         }
 
@@ -64,7 +65,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProcedimentoId,NomeProcedimento,ValorProcedimento")] Procedimento procedimento)
+        public async Task<IActionResult> Create([Bind("ProcedimentoId,NomeProcedimento,ValorProcedimento, TipoProcedimentoId")] Procedimento procedimento)
         {
             if (ModelState.IsValid)
             {
@@ -72,6 +73,7 @@ namespace Afrodite_Sistema.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["TipoProcedimentoId"] = new SelectList(_context.TipoProcedimento, "TipoProcedimentoId", "NomeTipoProcedimento", procedimento.TipoProcedimentoId);
             return View(procedimento);
         }
 
@@ -88,6 +90,7 @@ namespace Afrodite_Sistema.Controllers
             {
                 return NotFound();
             }
+            ViewData["TipoProcedimentoId"] = new SelectList(_context.TipoProcedimento, "TipoProcedimentoId", "NomeTipoProcedimento", procedimento.TipoProcedimentoId);
             return View(procedimento);
         }
 
@@ -96,7 +99,7 @@ namespace Afrodite_Sistema.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProcedimentoId,NomeProcedimento,ValorProcedimento")] Procedimento procedimento)
+        public async Task<IActionResult> Edit(int id, [Bind("ProcedimentoId,NomeProcedimento,ValorProcedimento, TipoProcedimentoId")] Procedimento procedimento)
         {
             if (id != procedimento.ProcedimentoId)
             {
@@ -123,6 +126,7 @@ namespace Afrodite_Sistema.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["TipoProcedimentoId"] = new SelectList(_context.TipoProcedimento, "TipoProcedimentId", "NomeTipoProcedimento", procedimento.TipoProcedimentoId);
             return View(procedimento);
         }
 
@@ -134,7 +138,7 @@ namespace Afrodite_Sistema.Controllers
                 return NotFound();
             }
 
-            var procedimento = await _context.Procedimento
+            var procedimento = await _context.Procedimento.Include(t => t.TipoProcedimento)
                 .FirstOrDefaultAsync(m => m.ProcedimentoId == id);
             if (procedimento == null)
             {

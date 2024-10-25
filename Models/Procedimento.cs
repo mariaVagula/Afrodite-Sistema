@@ -16,6 +16,11 @@ namespace Afrodite_Sistema.Models
 
         [Column("ValorProcedimento")]
         [Display(Name = "Valor do Procedimento")]
-        public int ValorProcedimento { get; set; } 
+        public int ValorProcedimento { get; set; }
+
+        [ForeignKey("TipoProcedimentoId")]
+        [Display(Name = "Tipo Procedimento")]
+        public int TipoProcedimentoId { get; set; }
+        public TipoProcedimento? TipoProcedimento { get; set; }
     }
 }
